@@ -3,7 +3,6 @@ import { combineReducers } from 'redux'
 import todos from './todos'
 import visibilityFilter from './visibilityFilter'
 
-// @TODO: why We don't mutate the state and create a new state?
 // export default function todoApp(state = {}, action) {
 //   return {
 //     visibilityFilter: visibilityFilter(state.visibilityFilter, action),

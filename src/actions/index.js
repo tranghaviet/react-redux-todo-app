@@ -15,7 +15,7 @@ let nextToDoId = 0
 * Action creators: create actions. factory pattern.
 */
 export const addToDo = text => ({
-  type: ADD_TODO, // action type
+  type: ADD_TODO,
   id: nextToDoId++,
   text,
 })
