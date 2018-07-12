@@ -1,14 +1,17 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { addToDo } from '../actions';
+import React from 'react'
+import { connect } from 'react-redux'
+import { addToDo } from '../actions'
 
 const AddTodo = ({ dispatch }) => {
   let input
+
   function onFormSubmit (event) {
     event.preventDefault()
+
     if (!input.value.trim()) {
       return
     }
+
     dispatch(addToDo(input.value))
     input.value = ''
   }

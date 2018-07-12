@@ -1,11 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
+import registerServiceWorker from './registerServiceWorker'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import todoApp from './reducers'
+import store from './store'
 // import {
 //   addToDo,
 //   toggleToDo,
@@ -13,25 +14,24 @@ import todoApp from './reducers'
 //   VisibilityFilters
 // } from './actions'
 
-const store = createStore(todoApp)
-
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root'));
-registerServiceWorker();
+  document.getElementById('root')
+)
+registerServiceWorker()
 
-// Log the initial state
-console.log(store.getState())
+// // Log the initial state
+// console.log(store.getState())
 
-// Every time the state changes, log it
-// Note that subscribe() returns a function for unregistering the listener
+// // Every time the state changes, log it
+// // Note that subscribe() returns a function for unregistering the listener
 // const unsubscribe = store.subscribe(() =>
 //   console.log(store.getState())
 // )
 
-// Dispatch some actions
+// // Dispatch some actions
 // store.dispatch(addToDo('Learn about actions'))
 // store.dispatch(addToDo('Learn about reducers'))
 // store.dispatch(addToDo('Learn about store'))

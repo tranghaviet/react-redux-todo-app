@@ -10,6 +10,7 @@ import visibilityFilter from './visibilityFilter'
 //   }
 // }
 
+// root reducer
 const todoApp = combineReducers({
   visibilityFilter,
   todos,
