@@ -2,9 +2,10 @@ import React from 'react'
 // import PropTypes from 'prop-types'
 
 const Todo = ({ onClick, onClickRemove, completed, text }) => (
-  <li onClick={onClick}>
+  <li>
     <span style={{textDecoration: completed ? 'line-through' : 'none'}}>{text}</span>
     {' - '}
+    <button onClick={onClick}>Toggle</button>
     <button onClick={onClickRemove}>Remove</button>
   </li>
 )
