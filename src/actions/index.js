@@ -9,8 +9,6 @@ export const REMOVE_TODO = 'REMOVE_TODO'
 export const TOGGLE_TODO = 'TOGGLE_TODO'
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
 
-let nextToDoId = 0
-
 /*
 * Action creators: create actions. factory pattern.
 */
@@ -21,7 +19,7 @@ export const setTodos = todos => ({
 
 export const addToDo = text => ({
   type: ADD_TODO,
-  id: nextToDoId++,
+  id: Math.floor(Math.random() * Math.floor(100000000)), //random id
   text,
 })
 
