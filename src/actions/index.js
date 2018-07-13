@@ -3,7 +3,7 @@
 /*
  * action types
  */
-
+export const SET_TODOS = 'SET_TODOS'
 export const ADD_TODO = 'ADD_TODO'
 export const REMOVE_TODO = 'REMOVE_TODO'
 export const TOGGLE_TODO = 'TOGGLE_TODO'
@@ -14,6 +14,11 @@ let nextToDoId = 0
 /*
 * Action creators: create actions. factory pattern.
 */
+export const setTodos = todos => ({
+  type: SET_TODOS,
+  payload: todos,
+})
+
 export const addToDo = text => ({
   type: ADD_TODO,
   id: nextToDoId++,

@@ -4,7 +4,7 @@ import './index.css'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
 import { Provider } from 'react-redux'
-import './firebase'
+import './bootstrap'
 import store from './store'
 // import {
 //   addToDo,

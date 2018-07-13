@@ -1,4 +1,5 @@
 import {
+  SET_TODOS,
   ADD_TODO,
   REMOVE_TODO,
   TOGGLE_TODO,
@@ -32,6 +33,7 @@ import {
 // }
 
 const todoReducers = {
+  [SET_TODOS]: (todos, action) => action.payload ? action.payload : todos,
   [ADD_TODO]: (todos, action) => [
     ...todos,
     {
